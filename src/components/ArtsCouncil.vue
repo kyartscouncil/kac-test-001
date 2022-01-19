@@ -98,7 +98,7 @@
 						>
 							<img
 								class="feature-photo-11-2020"
-								src="KAC/Showcasing/FeatureArtist/Previous/2022/images/2201-Feature-AddisonWilliams-HP.jpg"
+								src="https://info.umkc.edu/unews/wp-content/uploads/2018/08/Maryam_Mirzakhani_1.jpg"
 								alt="Addison Williams feature"
 							/>
 						</a>
