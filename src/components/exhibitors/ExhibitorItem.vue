@@ -1,6 +1,6 @@
 <template>
 	<li>
-		<h4 class="float-right">Booth #: {{ boothNumber }}</h4>
+		<h4>Booth #: {{ boothNumber }}</h4>
 		<h2>{{ businessName }}</h2>
 		<h3>{{ fullName }}</h3>
 		<div>

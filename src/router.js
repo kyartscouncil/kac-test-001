@@ -15,7 +15,7 @@ const router = createRouter({
 		{ path: '/info', component: EventInfo },
 		{ path: '/map', component: MapView },
 		{ path: '/exhibitors', component: ExhibitorsList },
-		{ path: '/exhibitors/:id', component: ExhibitorDetail },
+		{ path: '/exhibitors/:id', component: ExhibitorDetail, props: true },
 		{ path: '/:notFound(.*)', component: NotFound },
 	],
 });

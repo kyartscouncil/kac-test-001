@@ -1,6 +1,6 @@
 <template>
 	<section>
-		<h2>Filter</h2>
+		<exhibitor-filter @change-filter="setFilters"></exhibitor-filter>
 	</section>
 	<section>
 		<base-card>
@@ -26,17 +26,45 @@
 
 <script>
 	import ExhibitorItem from '../../components/exhibitors/ExhibitorItem.vue';
+	import ExhibitorFilter from '../../components/exhibitors/ExhibitorFilter.vue';
 
 	export default {
 		components: {
 			ExhibitorItem,
+			ExhibitorFilter,
+		},
+		data() {
+			return {
+				activeFilters: {
+					painting: true,
+					sculpture: true,
+					fiber: true,
+				},
+			};
 		},
 		computed: {
 			filteredExhibitors() {
-				return this.$store.getters['exhibitors/exhibitors'];
+				const exhibitors = this.$store.getters['exhibitors/exhibitors'];
+				return exhibitors.filter((exhibitor) => {
+					if (this.activeFilters.painting && exhibitor.media.includes('painting')) {
+						return true;
+					}
+					if (this.activeFilters.sculpture && exhibitor.media.includes('sculpture')) {
+						return true;
+					}
+					if (this.activeFilters.fiber && exhibitor.media.includes('fiber')) {
+						return true;
+					}
+					return false;
+				});
 			},
 			hasExhibitors() {
 				return this.$store.getters['exhibitors/hasExhibitors'];
+			},
+		},
+		methods: {
+			setFilters(updatedFilters) {
+				this.activeFilters = updatedFilters;
 			},
 		},
 	};

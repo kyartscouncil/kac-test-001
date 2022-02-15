@@ -37,6 +37,21 @@ export default {
 						'I am Julie and as a senior developer in a big tech company, I can help you get your first job or progress in your current role.',
 					boothNumber: 102,
 				},
+				{
+					id: 'e3',
+					businessName: 'Fibrous Feline',
+					firstName: 'P. J.',
+					lastName: 'Tucker',
+					media: ['fiber'],
+					city: 'Owensboro',
+					state: 'KY',
+					phone: '859-555-2222',
+					email: 'pjt@aol.com',
+					businessUrl: 'www.pjt.net',
+					description:
+						'I am PJ Tucker and as a senior developer in a big tech company, I can help you get your first job or progress in your current role.',
+					boothNumber: 102,
+				},
 			],
 		};
 	},
