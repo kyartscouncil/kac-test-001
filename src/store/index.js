@@ -1,9 +1,11 @@
 import { createStore } from 'vuex';
 
-import coachesModule from './modules/exhit'
+import exhibitorsModule from './modules/exhibitors/index.js';
 
 const store = createStore({
-   moduesl: 
+	modules: {
+		exhibitors: exhibitorsModule,
+	},
 });
 
 export default store;
