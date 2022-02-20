@@ -1,10 +1,9 @@
 <template>
 	<section>
-		<exhibitor-filter @change-filter="setFilters"></exhibitor-filter>
+		<exhibitor-filter v-if="false" @change-filter="setFilters"></exhibitor-filter>
 	</section>
 	<section>
-		<base-card>
-			<div class="controls">
+			<div v-if="false" class="controls">
 				<base-button mode="outline">Shuffle</base-button>
 			</div>
 			<ul v-if="hasExhibitors">
@@ -20,7 +19,6 @@
 				></exhibitor-item>
 			</ul>
 			<h3 v-else>No exhibitors found.</h3>
-		</base-card>
 	</section>
 </template>
 

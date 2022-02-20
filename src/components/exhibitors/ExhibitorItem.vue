@@ -3,7 +3,7 @@
 		<div class="actions">
 			<base-button mode="outline" link :to="exhibitorDetailsLink">View Details</base-button>
 		</div>
-		<h4>Booth #: {{ boothNumber }}</h4>
+		<p>Booth #: {{ boothNumber }}</p>
 		<h2>{{ businessName }}</h2>
 		<h3>{{ fullName }}</h3>
 		<div>
@@ -28,7 +28,7 @@
 
 <style scoped>
 	li {
-		margin: 1rem 0;
+		margin: 1rem;
 		border: 1px solid #424242;
 		border-radius: 12px;
 		padding: 1rem;
