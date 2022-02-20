@@ -19,6 +19,9 @@
 			};
 		},
 		computed: {
+			businessName() {
+				return this.selectedExhibitor.businessName;
+			},
 			fullName() {
 				return this.selectedExhibitor.firstName + ' ' + this.selectedExhibitor.lastName;
 			},

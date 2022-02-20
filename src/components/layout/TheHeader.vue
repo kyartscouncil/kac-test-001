@@ -5,6 +5,7 @@
 			<ul>
 				<li><router-link to="/info">Market Info</router-link></li>
 				<li><router-link to="/exhibitors">Exhibitor List</router-link></li>
+				<li><router-link to="/test">Exhibitor Index</router-link></li>
 				<li><router-link to="/map">Map</router-link></li>
 			</ul>
 		</nav>
@@ -13,7 +14,7 @@
 
 <style scoped>
 	header {
-		width: 100%;
+		max-width: 100%;
 		height: 10rem;
 		background-color: #3d008d;
 		display: flex;
@@ -25,7 +26,7 @@
 		text-decoration: none;
 		color: #f391e3;
 		display: inline-block;
-		padding: 0.75rem 1.5rem;
+		padding: 0.75rem .5rem;
 		border: 1px solid transparent;
 	}
 
@@ -51,7 +52,7 @@
 	}
 
 	header nav {
-		width: 90%;
+		width: 100%;
 		margin: auto;
 		display: flex;
 		justify-content: space-between;
@@ -64,8 +65,9 @@
 		margin: 0;
 		padding: 0;
 		display: flex;
-		justify-content: center;
+		justify-content: left;
 		align-items: center;
+		flex-wrap: wrap;
 	}
 
 	li {
