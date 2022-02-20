@@ -72,7 +72,7 @@
 <style scoped>
 	ul {
 		list-style: none;
-		margin: 0;
+		margin: 1rem;
 		padding: 0;
 		display: grid;
 		grid-template-columns: 1fr 1fr;

@@ -4,7 +4,7 @@
 			<div class="actions">
 				<base-button mode="outline" link :to="exhibitorDetailsLink">View Details</base-button>
 			</div>
-			<p>Booth #: {{ boothNumber }}</p>
+			<p>Booth # {{ boothNumber }}</p>
 			<h2>{{ businessName }}</h2>
 			<h3>{{ fullName }}</h3>
 			<div>
