@@ -1,20 +1,34 @@
 <template>
 	<li>
-		<div class="actions">
-			<base-button mode="outline" link :to="exhibitorDetailsLink">View Details</base-button>
-		</div>
-		<p>Booth #: {{ boothNumber }}</p>
-		<h2>{{ businessName }}</h2>
-		<h3>{{ fullName }}</h3>
-		<div>
-			<base-badge v-for="medium in media" :key="medium" :type="medium" :title="medium"></base-badge>
-		</div>
+		<base-card>
+			<div class="actions">
+				<base-button mode="outline" link :to="exhibitorDetailsLink">View Details</base-button>
+			</div>
+			<p>Booth #: {{ boothNumber }}</p>
+			<h2>{{ businessName }}</h2>
+			<h3>{{ fullName }}</h3>
+			<div>
+				<base-badge v-for="medium in media" :key="medium" :type="medium" :title="medium"></base-badge>
+			</div>
+		</base-card>
 	</li>
 </template>
 
 <script>
 	export default {
-		props: ['id', 'businessName', 'firstName', 'lastName', 'boothNumber', 'media'],
+		props: [
+			'id',
+			'boothNumber',
+			'media',
+			'businessName',
+			'firstName',
+			'lastName',
+			'city',
+			'state',
+			'phone',
+			'email',
+			'businessUrl',
+		],
 		computed: {
 			fullName() {
 				return this.firstName + ' ' + this.lastName;
@@ -27,12 +41,6 @@
 </script>
 
 <style scoped>
-	li {
-		margin: 1rem;
-		border: 1px solid #424242;
-		border-radius: 12px;
-		padding: 1rem;
-	}
 
 	.actions {
 		float: right;

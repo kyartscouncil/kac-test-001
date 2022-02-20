@@ -3,22 +3,22 @@
 		<exhibitor-filter v-if="false" @change-filter="setFilters"></exhibitor-filter>
 	</section>
 	<section>
-			<div v-if="false" class="controls">
-				<base-button mode="outline">Shuffle</base-button>
-			</div>
-			<ul v-if="hasExhibitors">
-				<exhibitor-item
-					v-for="exhibitor in filteredExhibitors"
-					:key="exhibitor.id"
-					:id="exhibitor.id"
-					:business-name="exhibitor.businessName"
-					:first-name="exhibitor.firstName"
-					:last-name="exhibitor.lastName"
-					:booth-number="exhibitor.boothNumber"
-					:media="exhibitor.media"
-				></exhibitor-item>
-			</ul>
-			<h3 v-else>No exhibitors found.</h3>
+		<div v-if="false" class="controls">
+			<base-button mode="outline">Shuffle</base-button>
+		</div>
+		<ul v-if="hasExhibitors">
+			<exhibitor-item
+				v-for="exhibitor in filteredExhibitors"
+				:key="exhibitor.id"
+				:id="exhibitor.id"
+				:business-name="exhibitor.businessName"
+				:first-name="exhibitor.firstName"
+				:last-name="exhibitor.lastName"
+				:booth-number="exhibitor.boothNumber"
+				:media="exhibitor.media"
+			></exhibitor-item>
+		</ul>
+		<h3 v-else>No exhibitors found.</h3>
 	</section>
 </template>
 
@@ -37,6 +37,7 @@
 					painting: true,
 					sculpture: true,
 					fiber: true,
+					natural: true,
 				},
 			};
 		},
@@ -53,7 +54,7 @@
 					if (this.activeFilters.fiber && exhibitor.media.includes('fiber')) {
 						return true;
 					}
-					return false;
+					return true;
 				});
 			},
 			hasExhibitors() {
@@ -74,12 +75,19 @@
 		margin: 0;
 		padding: 0;
 		display: grid;
-		grid-template-columns: 1fr;
+		grid-template-columns: 1fr 1fr;
 		column-gap: 1rem;
+		row-gap: 1rem;
 	}
 
 	.controls {
 		display: flex;
 		justify-content: space-between;
+	}
+
+	@media (max-width: 600px) {
+		ul {
+			grid-template-columns: 1fr;
+		}
 	}
 </style>

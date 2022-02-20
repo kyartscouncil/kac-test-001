@@ -4,8 +4,13 @@
 			<h4>Booth #: {{ boothNumber }}</h4>
 			<h2>{{ businessName }}</h2>
 			<h3>{{ fullName }}</h3>
+			<div>
+				<p>{{ fullLocation }}</p>
+				<p>{{ fullPhone }}</p>
+				<p>{{ email }}</p>
+				<p>{{ businessUrl }}</p>
+			</div>
 			<base-badge v-for="medium in media" :key="medium" :type="medium" :title="medium"></base-badge>
-			<p>{{ description }}</p>
 		</base-card>
 	</section>
 </template>
@@ -19,20 +24,29 @@
 			};
 		},
 		computed: {
+			boothNumber() {
+				return this.selectedExhibitor.boothNumber;
+			},
+			media() {
+				return this.selectedExhibitor.media;
+			},
 			businessName() {
 				return this.selectedExhibitor.businessName;
 			},
 			fullName() {
 				return this.selectedExhibitor.firstName + ' ' + this.selectedExhibitor.lastName;
 			},
-			media() {
-				return this.selectedExhibitor.media;
+			fullLocation() {
+				return this.selectedExhibitor.city + ', ' + this.selectedExhibitor.state;
 			},
-			boothNumber() {
-				return this.selectedExhibitor.boothNumber;
+			fullPhone() {
+				return this.selectedExhibitor.phone.slice(0, 3) + '-' + this.selectedExhibitor.phone.slice(3, 6) + '-' + this.selectedExhibitor.phone.slice(6);
 			},
-			description() {
-				return this.selectedExhibitor.description;
+			email() {
+				return this.selectedExhibitor.email;
+			},
+			businessUrl() {
+				return this.selectedExhibitor.businessUrl;
 			},
 		},
 		created() {
@@ -42,3 +56,13 @@
 		},
 	};
 </script>
+
+<style scoped>
+	div {
+		margin: 1.5rem 0rem 2rem 0rem;
+	}
+
+	p {
+		margin: 0.25rem 0rem;
+	}
+</style>
