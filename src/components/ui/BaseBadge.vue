@@ -17,26 +17,11 @@
 
 <style scoped>
 	.badge {
-		background-color: #ccc;
+		background-color: rgba(155, 225, 155, 1.0);
 		color: #252525;
 		border-radius: 30px;
-		padding: 0.5rem 1.5rem;
+		padding: 0.35rem 1rem 0.45rem 1rem;
 		display: inline-block;
 		margin-right: 0.5rem;
-	}
-
-	.frontend {
-		background-color: #3d008d;
-		color: white;
-	}
-
-	.backend {
-		background-color: #71008d;
-		color: white;
-	}
-
-	.career {
-		background-color: #8d006e;
-		color: white;
 	}
 </style>

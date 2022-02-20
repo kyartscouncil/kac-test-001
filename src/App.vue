@@ -1,6 +1,8 @@
 <template>
-	<the-header></the-header>
-	<router-view></router-view>
+	<section>
+		<the-header></the-header>
+		<router-view></router-view>
+	</section>
 </template>
 
 <script>

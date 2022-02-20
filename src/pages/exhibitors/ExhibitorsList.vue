@@ -75,6 +75,9 @@
 		list-style: none;
 		margin: 0;
 		padding: 0;
+		display: grid;
+		grid-template-columns: 1fr;
+		column-gap: 1rem;
 	}
 
 	.controls {

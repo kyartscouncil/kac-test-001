@@ -1,13 +1,13 @@
 <template>
 	<li>
+		<div class="actions">
+			<base-button mode="outline" link :to="exhibitorDetailsLink">View Details</base-button>
+		</div>
 		<h4>Booth #: {{ boothNumber }}</h4>
 		<h2>{{ businessName }}</h2>
 		<h3>{{ fullName }}</h3>
 		<div>
 			<base-badge v-for="medium in media" :key="medium" :type="medium" :title="medium"></base-badge>
-		</div>
-		<div class="actions">
-			<base-button mode="outline" link :to="exhibitorDetailsLink">View Details</base-button>
 		</div>
 	</li>
 </template>
@@ -34,27 +34,8 @@
 		padding: 1rem;
 	}
 
-	h2 {
-		font-size: 2rem;
-	}
-
-	h3 {
-		font-size: 1.5rem;
-	}
-
-	h2,
-	h3,
-	h4 {
-		margin: 0.5rem 0;
-	}
-
-	div {
-		margin: 0.5rem 0;
-	}
-
 	.actions {
-		display: flex;
-		justify-content: flex-end;
+		float: right;
 	}
 
 	.float-right {

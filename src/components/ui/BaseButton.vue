@@ -32,8 +32,8 @@
 <style scoped>
 	button,
 	a {
-		text-decoration: none;
-		padding: 0.75rem 1.5rem;
+		text-decoration: underline;
+		padding: 0.35rem 1rem 0.45rem 1rem;
 		font: inherit;
 		background-color: #3a0061;
 		border: 1px solid #3a0061;
