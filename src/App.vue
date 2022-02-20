@@ -17,6 +17,7 @@
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+	@import url('style/style.css');
 
 	* {
 		box-sizing: border-box;
