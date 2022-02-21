@@ -14,7 +14,7 @@
 
 <style scoped>
 	header {
-		max-width: 100%;
+		width: 100%;
 		height: 10rem;
 		background-color: #3d008d;
 		display: flex;
@@ -26,7 +26,7 @@
 		text-decoration: none;
 		color: #f391e3;
 		display: inline-block;
-		padding: 0.75rem .5rem;
+		padding: 0.75rem 0.5rem;
 		border: 1px solid transparent;
 	}
 
@@ -52,7 +52,7 @@
 	}
 
 	header nav {
-		width: 100%;
+		width: 90vw;
 		margin: auto;
 		display: flex;
 		justify-content: space-between;
@@ -65,12 +65,8 @@
 		margin: 0;
 		padding: 0;
 		display: flex;
-		justify-content: left;
+		justify-content: space-between;
 		align-items: center;
 		flex-wrap: wrap;
-	}
-
-	li {
-		margin: 0 0.5rem;
 	}
 </style>
