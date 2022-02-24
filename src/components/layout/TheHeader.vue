@@ -9,7 +9,6 @@
 				<li><router-link to="/">Home</router-link></li>
 				<li><router-link to="/info">Market Info</router-link></li>
 				<li><router-link to="/exhibitors">Exhibitor List</router-link></li>
-				<li><router-link to="/exhibitor-index">Exhibitor Index</router-link></li>
 				<li><router-link to="/map">Map</router-link></li>
 			</ul>
 		</nav>

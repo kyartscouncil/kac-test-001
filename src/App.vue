@@ -1,6 +1,6 @@
 <template>
 	<section>
-		<the-header @closeMenu="toggleMobileNav"></the-header>
+		<the-header></the-header>
 		<router-view></router-view>
 	</section>
 </template>
