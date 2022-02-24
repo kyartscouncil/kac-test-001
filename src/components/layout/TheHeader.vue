@@ -1,72 +1,106 @@
 <template>
 	<header>
-		<nav>
-			<h1><router-link to="/">Kentucky Crafted Market</router-link></h1>
-			<ul>
+		<nav class="topnav">
+			<h1>
+				<router-link to="/">Kentucky Crafted Market</router-link>
+			</h1>
+			<i @click="toggleMobileNav" class="bx bx-menu icon" :class="{ 'icon-active': mobileNav }"></i>
+			<ul v-show="mobileNav" class="dropdown-nav">
+				<li><router-link to="/">Home</router-link></li>
 				<li><router-link to="/info">Market Info</router-link></li>
 				<li><router-link to="/exhibitors">Exhibitor List</router-link></li>
-				<li><router-link to="/test">Exhibitor Index</router-link></li>
+				<li><router-link to="/exhibitor-index">Exhibitor Index</router-link></li>
 				<li><router-link to="/map">Map</router-link></li>
 			</ul>
 		</nav>
 	</header>
 </template>
 
+<script>
+	export default {
+		name: 'navigation',
+		data() {
+			return {
+				scrollPosition: null,
+				mobile: true,
+				mobileNav: false,
+				windowWidth: null,
+			};
+		},
+		methods: {
+			toggleMobileNav() {
+				this.mobileNav = !this.mobileNav;
+			},
+			close(e) {
+				if (!this.$el.contains(e.target)) {
+					this.mobileNav = false;
+				}
+			},
+		},
+		mounted() {
+			document.addEventListener('click', this.close);
+		},
+		beforeDestroy() {
+			document.removeEventListener('click', this.close);
+		},
+	};
+</script>
+
 <style scoped>
+	h1 {
+		font-size: 16px;
+	}
+
 	header {
 		width: 100%;
-		height: 10rem;
-		background-color: #3d008d;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		background: var(--header-bg);
+		position: sticky;
+		top: 0;
 	}
 
-	header a {
+	nav {
+		width: 90%;
+		padding: 12px 0;
+		margin: 0 auto;
+	}
+
+	a {
+		color: black;
 		text-decoration: none;
-		color: #f391e3;
-		display: inline-block;
-		padding: 0.75rem 0.5rem;
-		border: 1px solid transparent;
 	}
 
-	a:active,
-	a:hover,
-	a.router-link-active {
-		border: 1px solid #f391e3;
-	}
-
-	h1 {
-		margin: 0;
-	}
-
-	h1 a {
-		color: white;
-		margin: 0;
-	}
-
-	h1 a:hover,
-	h1 a:active,
-	h1 a.router-link-active {
-		border-color: transparent;
-	}
-
-	header nav {
-		width: 90vw;
-		margin: auto;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		flex-wrap: wrap;
-	}
-
-	header ul {
+	ul {
 		list-style: none;
 		margin: 0;
 		padding: 0;
+	}
+
+	li {
+		text-transform: uppercase;
+		padding: 10px 0;
+		border-bottom: 1px solid black;
+	}
+
+	.icon {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+
+	i {
+		cursor: pointer;
+		font-size: 24px;
+		transition: 0.8s ease all;
+	}
+
+	.icon-active {
+		transform: rotate(180deg);
+	}
+
+	.dropdown-nav {
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		flex-wrap: wrap;
+		flex-direction: column;
+		width: 100%;
+		margin: 0 auto;
 	}
 </style>
