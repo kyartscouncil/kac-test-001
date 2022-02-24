@@ -4,7 +4,8 @@
 			<h1>Market Info</h1>
 		</div>
 		<div>
-			<h2>Dates</h2>
+			<h2>Hours</h2>
+			<p>The Kentucky Crafted Market is open to the public during the following hours:</p>
 
 			<div class="grid-secondary">
 				<div>
@@ -25,10 +26,36 @@
 		</div>
 		<div>
 			<h2>Parking</h2>
-			<p>Parking at the Kentucky Horse Park is $5 per vehicle per entry, unless otherwise stated.</p>
+			<p>Parking at the Kentucky Horse Park is $5 per vehicle per entry, unless stated otherwise.</p>
+		</div>
+		<div>
+			<h2>Accessible Parking</h2>
 			<p>
 				Parking accommodations for guests with disabilities are available in the Kentucky Horse Park parking lots
-				and labeled with signaged.
+				and labeled with signage.
+			</p>
+		</div>
+		<div>
+			<h2>Information Desk</h2>
+			<p>
+				The information desk is located near the front doors of the Alltech Arena. For questions about the
+				facilities, the show or market exhibitors, please talk with staff at the information desk.
+			</p>
+		</div>
+		<div>
+			<h2>Accessibility Services</h2>
+			<p>
+				A limited number of wheelchairs are available at the information desk for checkout with a valid I.D. and
+				credit card number.
+			</p>
+			<p>All restrooms on the grounds are wheelchair accessible, and ramps give access to all buildings.</p>
+		</div>
+		<div>
+			<h2>Food Services</h2>
+			<p>
+				The concessions stations are located at the front of the exhibit hall and will be open during show hours.
+				There are a number of restaurants located within driving distance of the Kentucky Horse Park in Lexington
+				and Georgetown. See the information desk for recommendations.
 			</p>
 		</div>
 	</section>
