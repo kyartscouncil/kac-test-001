@@ -7,11 +7,11 @@
 			<h3>{{ fullName }}</h3>
 			<div>
 				<p>{{ fullLocation }}</p>
-				<p>{{ fullPhone }}</p>
-				<base-button mode="outline"><a :href="businessUrl" target="_blank">Website</a></base-button>
-				<base-button mode="outline"
-					><a :href="emailLink" target="_blank">{{ email }}</a></base-button
-				>
+				<p>
+					<a :href="fullPhoneLink">{{ fullPhone }}</a>
+				</p>
+				<p><a :href="businessUrl" target="_blank">Website</a></p>
+				<p><a :href="emailLink" target="_blank">Email</a></p>
 			</div>
 			<base-badge v-for="medium in media" :key="medium" :type="medium" :title="medium"></base-badge>
 		</base-card>
@@ -55,6 +55,9 @@
 					'-' +
 					this.selectedExhibitor.phone.slice(6)
 				);
+			},
+			fullPhoneLink() {
+				return 'tel:' + this.fullPhone;
 			},
 			email() {
 				return this.selectedExhibitor.email;
