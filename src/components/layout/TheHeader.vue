@@ -6,10 +6,10 @@
 			</h1>
 			<i @click="toggleMobileNav" class="bx bx-menu icon" :class="{ 'icon-active': mobileNav }"></i>
 			<ul v-show="mobileNav" class="dropdown-nav">
-				<li><router-link to="/">Home</router-link></li>
-				<li><router-link to="/info">Market Info</router-link></li>
-				<li><router-link to="/exhibitors">Exhibitor List</router-link></li>
-				<li><router-link to="/map">Map</router-link></li>
+				<li><router-link to="/" @click="toggleMobileNav">Home</router-link></li>
+				<li><router-link to="/info" @click="toggleMobileNav">Market Info</router-link></li>
+				<li><router-link to="/exhibitors" @click="toggleMobileNav">Exhibitor List</router-link></li>
+				<li><router-link to="/map" @click="toggleMobileNav">Map</router-link></li>
 			</ul>
 		</nav>
 	</header>
