@@ -1,0 +1,46 @@
+/* COLORS */
+
+:root {
+	--header-bg: #53BA65;
+	--nav-links: #B96BAC;
+
+	--green1: #53BA65;
+	--green2: #659941;
+	--green3: #88CC66;
+	--purple1: #B96BAC;
+	--purple2: #7A5C99;
+	--purple3: #887ACC;
+}
+
+html {
+	font-size: 15px;
+}
+
+h1,
+h2,
+h3, 
+h4 {
+	margin: 0.5rem 0;
+}
+
+p {
+	font-size: 1rem;
+	margin: 0rem 0rem .5rem 0rem;
+	line-height: 1.5rem;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+h3 {
+	font-size: 1rem;
+}
+
+h4 {
+	font-size: 1rem;
+}
