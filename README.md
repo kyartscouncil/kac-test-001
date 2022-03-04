@@ -1,6 +1,6 @@
 Temporary link
 
-https://friendly-mirzakhani-cde3d2.netlify.app/
+https://kycraftedmarket.netlify.app/
 
 # Vue 3 + Vite
 
